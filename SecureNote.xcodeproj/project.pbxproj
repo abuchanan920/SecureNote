@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425232061DA5BC4A00317D1A /* editor in Resources */ = {isa = PBXBuildFile; fileRef = 425232051DA5BC4A00317D1A /* editor */; };
 		858166FA1D9C879500D50202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858166F91D9C879500D50202 /* AppDelegate.swift */; };
 		858166FC1D9C879500D50202 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858166FB1D9C879500D50202 /* ViewController.swift */; };
 		858166FF1D9C879500D50202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858166FD1D9C879500D50202 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		425232051DA5BC4A00317D1A /* editor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = editor; sourceTree = "<group>"; };
 		858166F61D9C879500D50202 /* SecureNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858166F91D9C879500D50202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		858166FB1D9C879500D50202 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		858166F81D9C879500D50202 /* SecureNote */ = {
 			isa = PBXGroup;
 			children = (
+				425232051DA5BC4A00317D1A /* editor */,
 				858166F91D9C879500D50202 /* AppDelegate.swift */,
 				858166FB1D9C879500D50202 /* ViewController.swift */,
 				858166FD1D9C879500D50202 /* Main.storyboard */,
@@ -181,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425232061DA5BC4A00317D1A /* editor in Resources */,
 				858167041D9C879500D50202 /* LaunchScreen.storyboard in Resources */,
 				858167011D9C879500D50202 /* Assets.xcassets in Resources */,
 				858166FF1D9C879500D50202 /* Main.storyboard in Resources */,
@@ -412,6 +416,7 @@
 				858167151D9C879500D50202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		858167161D9C879500D50202 /* Build configuration list for PBXNativeTarget "SecureNoteTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				858167181D9C879500D50202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
