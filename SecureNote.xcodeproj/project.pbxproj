@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		85006C441DA5B86A0061D8C1 /* SecureNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85006C421DA5B86A0061D8C1 /* SecureNote.xcdatamodeld */; };
-		85006C481DA5C0EE0061D8C1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85006C471DA5C0EE0061D8C1 /* CoreDataStack.swift */; };
 		85006C4A1DA5C67F0061D8C1 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85006C491DA5C67F0061D8C1 /* Note.swift */; };
+		8562B2651DA6800E0044BF90 /* ListNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562B2641DA6800E0044BF90 /* ListNotesViewController.swift */; };
+		8562B2671DA683470044BF90 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562B2661DA683470044BF90 /* CoreDataService.swift */; };
+		8562B2691DA6A8EA0044BF90 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8562B2681DA6A8EA0044BF90 /* NoteTableViewCell.xib */; };
 		858166FA1D9C879500D50202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858166F91D9C879500D50202 /* AppDelegate.swift */; };
-		858166FC1D9C879500D50202 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858166FB1D9C879500D50202 /* ViewController.swift */; };
+		858166FC1D9C879500D50202 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858166FB1D9C879500D50202 /* EditNoteViewController.swift */; };
 		858166FF1D9C879500D50202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858166FD1D9C879500D50202 /* Main.storyboard */; };
 		858167011D9C879500D50202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858167001D9C879500D50202 /* Assets.xcassets */; };
 		858167041D9C879500D50202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858167021D9C879500D50202 /* LaunchScreen.storyboard */; };
@@ -30,11 +32,13 @@
 
 /* Begin PBXFileReference section */
 		85006C431DA5B86A0061D8C1 /* SecureNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureNote.xcdatamodel; sourceTree = "<group>"; };
-		85006C471DA5C0EE0061D8C1 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		85006C491DA5C67F0061D8C1 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		8562B2641DA6800E0044BF90 /* ListNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesViewController.swift; sourceTree = "<group>"; };
+		8562B2661DA683470044BF90 /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		8562B2681DA6A8EA0044BF90 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 		858166F61D9C879500D50202 /* SecureNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858166F91D9C879500D50202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		858166FB1D9C879500D50202 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		858166FB1D9C879500D50202 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 		858166FE1D9C879500D50202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		858167001D9C879500D50202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		858167031D9C879500D50202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,14 +88,16 @@
 			isa = PBXGroup;
 			children = (
 				858166F91D9C879500D50202 /* AppDelegate.swift */,
-				858166FB1D9C879500D50202 /* ViewController.swift */,
+				858166FB1D9C879500D50202 /* EditNoteViewController.swift */,
 				858166FD1D9C879500D50202 /* Main.storyboard */,
 				858167001D9C879500D50202 /* Assets.xcassets */,
 				858167021D9C879500D50202 /* LaunchScreen.storyboard */,
 				858167051D9C879500D50202 /* Info.plist */,
 				85006C421DA5B86A0061D8C1 /* SecureNote.xcdatamodeld */,
-				85006C471DA5C0EE0061D8C1 /* CoreDataStack.swift */,
 				85006C491DA5C67F0061D8C1 /* Note.swift */,
+				8562B2641DA6800E0044BF90 /* ListNotesViewController.swift */,
+				8562B2661DA683470044BF90 /* CoreDataService.swift */,
+				8562B2681DA6A8EA0044BF90 /* NoteTableViewCell.xib */,
 			);
 			path = SecureNote;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				858167041D9C879500D50202 /* LaunchScreen.storyboard in Resources */,
 				858167011D9C879500D50202 /* Assets.xcassets in Resources */,
 				858166FF1D9C879500D50202 /* Main.storyboard in Resources */,
+				8562B2691DA6A8EA0044BF90 /* NoteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,9 +217,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8562B2671DA683470044BF90 /* CoreDataService.swift in Sources */,
 				85006C4A1DA5C67F0061D8C1 /* Note.swift in Sources */,
-				85006C481DA5C0EE0061D8C1 /* CoreDataStack.swift in Sources */,
-				858166FC1D9C879500D50202 /* ViewController.swift in Sources */,
+				8562B2651DA6800E0044BF90 /* ListNotesViewController.swift in Sources */,
+				858166FC1D9C879500D50202 /* EditNoteViewController.swift in Sources */,
 				85006C441DA5B86A0061D8C1 /* SecureNote.xcdatamodeld in Sources */,
 				858166FA1D9C879500D50202 /* AppDelegate.swift in Sources */,
 			);

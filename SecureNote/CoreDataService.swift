@@ -1,7 +1,24 @@
+//
+//  CoreDataService.swift
+//  SecureNote
+//
+//  Created by Karan Krishnani on 10/6/16.
+//  Copyright © 2016 ThoughtWorks. All rights reserved.
+//
+
 import CoreData
 
-class CoreDataStack {
-    static let instance = CoreDataStack()
+class CoreDataService {
+    static let instance = CoreDataService()
+
+    func fetchNotes() -> [Note] {
+        let context = self.persistentContainer.viewContext
+        do {
+            return try context.fetch(NSFetchRequest<Note>(entityName: "Note"))
+        } catch {
+           fatalError("Error while fetching Notes from Core Data")
+        }
+    }
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*

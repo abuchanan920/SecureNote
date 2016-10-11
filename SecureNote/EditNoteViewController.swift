@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EditNoteViewController.swift
 //  SecureNote
 //
 //  Created by Karan Krishnani on 9/28/16.
@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class EditNoteViewController: UIViewController {
 
     @IBOutlet weak var textContent: UITextView!
     @IBOutlet weak var textTitle: UITextField!
@@ -17,8 +17,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let context = CoreDataStack.instance.persistentContainer.viewContext
-        currentNote = Note(context: context)
+
+        textTitle.text = currentNote.title
+        textContent.text = currentNote.content
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
     @IBAction func saveNote(_ sender: UIBarButtonItem) {
         currentNote.title = textTitle.text!
         currentNote.content = textContent.text
-        CoreDataStack.instance.saveContext()
+        CoreDataService.instance.saveContext()
     }
 
 }
