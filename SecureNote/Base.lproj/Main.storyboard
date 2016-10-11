@@ -51,7 +51,7 @@
                             <constraint firstItem="fSB-k3-pxq" firstAttribute="top" secondItem="kwJ-sd-Y3t" secondAttribute="bottom" id="Jpk-2g-Abs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fSB-k3-pxq" secondAttribute="trailing" constant="-32" id="R9O-4G-qXd"/>
                             <constraint firstItem="kwJ-sd-Y3t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ajD-xp-U4S"/>
-                            <constraint firstItem="cIO-fP-hzo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gBM-4H-bKL"/>
+                            <constraint firstItem="cIO-fP-hzo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="gBM-4H-bKL"/>
                             <constraint firstItem="kwJ-sd-Y3t" firstAttribute="top" secondItem="cIO-fP-hzo" secondAttribute="bottom" id="hnv-nw-EnP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cIO-fP-hzo" secondAttribute="trailing" id="ueZ-Ls-wzy"/>
                         </constraints>
@@ -68,7 +68,7 @@
         <!--List Notes View Controller-->
         <scene sceneID="aR3-Sh-J9S">
             <objects>
-                <viewController id="xYr-om-2Yj" customClass="ListNotesViewController" customModule="SecureNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="xYr-om-2Yj" customClass="ListNotesViewController" customModule="SecureNote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZXY-mF-QEy"/>
                         <viewControllerLayoutGuide type="bottom" id="fTf-W5-zmS"/>
@@ -83,10 +83,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fTf-W5-zmS" firstAttribute="top" secondItem="q8f-tA-dEM" secondAttribute="bottom" id="39E-x0-E1R"/>
+                            <constraint firstItem="fTf-W5-zmS" firstAttribute="top" secondItem="q8f-tA-dEM" secondAttribute="bottom" constant="5" id="39E-x0-E1R"/>
                             <constraint firstItem="q8f-tA-dEM" firstAttribute="leading" secondItem="UBM-Lz-dDa" secondAttribute="leadingMargin" id="UnR-QF-ivA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q8f-tA-dEM" secondAttribute="trailing" id="dji-qd-4mj"/>
-                            <constraint firstItem="q8f-tA-dEM" firstAttribute="top" secondItem="ZXY-mF-QEy" secondAttribute="bottom" id="pwZ-DF-6CB"/>
+                            <constraint firstItem="q8f-tA-dEM" firstAttribute="top" secondItem="ZXY-mF-QEy" secondAttribute="bottom" constant="5" id="pwZ-DF-6CB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lte-g4-cEn"/>

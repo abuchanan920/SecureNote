@@ -22,11 +22,6 @@ class EditNoteViewController: UIViewController {
         textContent.text = currentNote.content
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func saveNote(_ sender: UIBarButtonItem) {
         currentNote.title = textTitle.text!
         currentNote.content = textContent.text
