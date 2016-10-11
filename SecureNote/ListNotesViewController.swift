@@ -11,16 +11,26 @@ import CoreData
 
 class ListNotesViewController: UIViewController {
     let editNoteSegue = "EditNoteSegue"
+    let addNoteSegue = "AddNoteSegue"
 
     var notes: [Note]!
 
     @IBOutlet weak var tableView: UITableView!
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         title = "Notes"
         setupTableView()
+        refreshNotes()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshNotes()
+    }
+
+    private func refreshNotes() {
         notes = CoreDataService.instance.fetchNotes()
+        tableView.reloadData()
     }
 
     private func setupTableView() {
@@ -35,6 +45,10 @@ class ListNotesViewController: UIViewController {
                 let editNoteVC = segue.destination as! EditNoteViewController
                 editNoteVC.currentNote = notes[indexPath.row]
             }
+        } else if segue.identifier == addNoteSegue {
+            let editNoteVC = segue.destination as! EditNoteViewController
+            let context = CoreDataService.instance.persistentContainer.viewContext
+            editNoteVC.currentNote = Note(context: context)
         }
     }
 }

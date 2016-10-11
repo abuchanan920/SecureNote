@@ -89,7 +89,13 @@
                             <constraint firstItem="q8f-tA-dEM" firstAttribute="top" secondItem="ZXY-mF-QEy" secondAttribute="bottom" constant="5" id="pwZ-DF-6CB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Lte-g4-cEn"/>
+                    <navigationItem key="navigationItem" id="Lte-g4-cEn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WIN-Mm-HBg">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="AddNoteSegue" id="2Th-W4-WMl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="q8f-tA-dEM" id="6oE-Iv-83c"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="EditNoteSegue" id="Abb-mO-EGv"/>
@@ -118,4 +124,7 @@
             <point key="canvasLocation" x="-783.20000000000005" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Th-W4-WMl"/>
+    </inferredMetricsTieBreakers>
 </document>
