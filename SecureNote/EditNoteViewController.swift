@@ -34,6 +34,28 @@ class EditNoteViewController: UIViewController {
         CoreDataService.instance.saveContext()
     }
 
+    @IBAction func deleteNote(_ sender: UIBarButtonItem) {
+        let confirmAlert = UIAlertController(title: "Confirm", message: "Delete this note?", preferredStyle: .alert)
+
+        let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { uiAlertAction in
+
+            self.deleteNote()
+
+            let _ = self.navigationController?.popViewController(animated: true)
+        })
+        let noAction = UIAlertAction(title: "No", style: .cancel, handler: {_ in } )
+
+        confirmAlert.addAction(noAction)
+        confirmAlert.addAction(yesAction)
+        
+        self.present(confirmAlert, animated: true, completion: {})
+    }
+
+    func deleteNote() {
+        let context = CoreDataService.instance.persistentContainer.viewContext
+        context.delete(self.currentNote)
+        CoreDataService.instance.saveContext()
+    }
 }
 
 extension EditNoteViewController: UITextViewDelegate {

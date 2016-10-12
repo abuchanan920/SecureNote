@@ -21,7 +21,11 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-k3-pxq">
                                 <items>
-                                    <barButtonItem title="Delete" id="3fs-1t-8et"/>
+                                    <barButtonItem image="Trash-25" id="3fs-1t-8et" userLabel="Delete">
+                                        <connections>
+                                            <action selector="deleteNote:" destination="BYZ-38-t0r" id="HrG-3t-qic"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="add" id="gw7-i9-UTI"/>
                                     <barButtonItem title="Save" id="s65-eq-ODm">
                                         <connections>
@@ -124,6 +128,9 @@
             <point key="canvasLocation" x="-783.20000000000005" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Trash-25" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Th-W4-WMl"/>
     </inferredMetricsTieBreakers>
