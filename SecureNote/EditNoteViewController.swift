@@ -17,16 +17,34 @@ class EditNoteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        textTitle.delegate = self
+        textContent.delegate = self
 
         textTitle.text = currentNote.title
         textContent.text = currentNote.content
     }
 
     @IBAction func saveNote(_ sender: UIBarButtonItem) {
+        saveNote()
+    }
+
+    func saveNote() {
         currentNote.title = textTitle.text!
         currentNote.content = textContent.text
         CoreDataService.instance.saveContext()
     }
 
+}
+
+extension EditNoteViewController: UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        saveNote()
+    }
+}
+
+extension EditNoteViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        saveNote()
+    }
 }
 
