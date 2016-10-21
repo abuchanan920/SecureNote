@@ -14,6 +14,9 @@
 		851A7BE51DB7A239006BD827 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851A7BE31DB7A239006BD827 /* Quick.framework */; };
 		853F53A51DB7A2C400602CBC /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 851A7BE21DB7A239006BD827 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		853F53A61DB7A2C400602CBC /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 851A7BE31DB7A239006BD827 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		853F53A81DB9A67400602CBC /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853F53A71DB9A67400602CBC /* FBSnapshotTestCase.framework */; };
+		853F53A91DB9A67C00602CBC /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 853F53A71DB9A67400602CBC /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		853F53AB1DB9A72B00602CBC /* ListNoteSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F53AA1DB9A72B00602CBC /* ListNoteSnapshotTest.swift */; };
 		8562B2651DA6800E0044BF90 /* ListNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562B2641DA6800E0044BF90 /* ListNotesViewController.swift */; };
 		8562B2671DA683470044BF90 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562B2661DA683470044BF90 /* CoreDataService.swift */; };
 		8562B2691DA6A8EA0044BF90 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8562B2681DA6A8EA0044BF90 /* NoteTableViewCell.xib */; };
@@ -42,6 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				853F53A91DB9A67C00602CBC /* FBSnapshotTestCase.framework in CopyFiles */,
 				853F53A51DB7A2C400602CBC /* Nimble.framework in CopyFiles */,
 				853F53A61DB7A2C400602CBC /* Quick.framework in CopyFiles */,
 			);
@@ -55,6 +59,8 @@
 		851A7BDF1DB7A1CB006BD827 /* ListNotesViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesViewControllerSpec.swift; sourceTree = "<group>"; };
 		851A7BE21DB7A239006BD827 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		851A7BE31DB7A239006BD827 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		853F53A71DB9A67400602CBC /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		853F53AA1DB9A72B00602CBC /* ListNoteSnapshotTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNoteSnapshotTest.swift; sourceTree = "<group>"; };
 		8562B2641DA6800E0044BF90 /* ListNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesViewController.swift; sourceTree = "<group>"; };
 		8562B2661DA683470044BF90 /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		8562B2681DA6A8EA0044BF90 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853F53A81DB9A67400602CBC /* FBSnapshotTestCase.framework in Frameworks */,
 				851A7BE51DB7A239006BD827 /* Quick.framework in Frameworks */,
 				851A7BE41DB7A239006BD827 /* Nimble.framework in Frameworks */,
 			);
@@ -93,6 +100,7 @@
 		851A7BE11DB7A239006BD827 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				853F53A71DB9A67400602CBC /* FBSnapshotTestCase.framework */,
 				851A7BE21DB7A239006BD827 /* Nimble.framework */,
 				851A7BE31DB7A239006BD827 /* Quick.framework */,
 			);
@@ -142,6 +150,7 @@
 				851A7BDF1DB7A1CB006BD827 /* ListNotesViewControllerSpec.swift */,
 				8581670E1D9C879500D50202 /* SecureNoteTests.swift */,
 				858167101D9C879500D50202 /* Info.plist */,
+				853F53AA1DB9A72B00602CBC /* ListNoteSnapshotTest.swift */,
 			);
 			path = SecureNoteTests;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853F53AB1DB9A72B00602CBC /* ListNoteSnapshotTest.swift in Sources */,
 				8581670F1D9C879500D50202 /* SecureNoteTests.swift in Sources */,
 				851A7BE01DB7A1CB006BD827 /* ListNotesViewControllerSpec.swift in Sources */,
 			);

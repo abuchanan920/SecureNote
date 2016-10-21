@@ -72,7 +72,7 @@
         <!--List Notes View Controller-->
         <scene sceneID="aR3-Sh-J9S">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="xYr-om-2Yj" customClass="ListNotesViewController" customModule="SecureNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListNotesViewController" automaticallyAdjustsScrollViewInsets="NO" id="xYr-om-2Yj" customClass="ListNotesViewController" customModule="SecureNote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZXY-mF-QEy"/>
                         <viewControllerLayoutGuide type="bottom" id="fTf-W5-zmS"/>
