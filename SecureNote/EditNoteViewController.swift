@@ -12,7 +12,8 @@ class EditNoteViewController: UIViewController {
 
     @IBOutlet weak var textContent: UITextView!
     @IBOutlet weak var textTitle: UITextField!
-
+    @IBOutlet weak var buttonSave: UIBarButtonItem!
+    
     var currentNote: Note!
 
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class EditNoteViewController: UIViewController {
 
         textTitle.text = currentNote.title
         textContent.text = currentNote.content
+        buttonSave.isEnabled = false
     }
 
     @IBAction func saveNote(_ sender: UIBarButtonItem) {
@@ -32,6 +34,7 @@ class EditNoteViewController: UIViewController {
         currentNote.title = textTitle.text!
         currentNote.content = textContent.text
         CoreDataService.instance.saveContext()
+        buttonSave.isEnabled = false
     }
 
     @IBAction func deleteNote(_ sender: UIBarButtonItem) {
@@ -62,11 +65,19 @@ extension EditNoteViewController: UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
         saveNote()
     }
+
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        buttonSave.isEnabled = true
+    }
 }
 
 extension EditNoteViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         saveNote()
+    }
+
+    func textViewDidChange(_ textView: UITextView) {
+        buttonSave.isEnabled = true
     }
 }
 
