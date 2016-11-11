@@ -12,6 +12,7 @@
 		851A7BE01DB7A1CB006BD827 /* ListNotesViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851A7BDF1DB7A1CB006BD827 /* ListNotesViewControllerSpec.swift */; };
 		851A7BE41DB7A239006BD827 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851A7BE21DB7A239006BD827 /* Nimble.framework */; };
 		851A7BE51DB7A239006BD827 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851A7BE31DB7A239006BD827 /* Quick.framework */; };
+		852ACF8E1DCFAC0500AED500 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852ACF8D1DCFAC0500AED500 /* KeychainService.swift */; };
 		853F53A51DB7A2C400602CBC /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 851A7BE21DB7A239006BD827 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		853F53A61DB7A2C400602CBC /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 851A7BE31DB7A239006BD827 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8562B2651DA6800E0044BF90 /* ListNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562B2641DA6800E0044BF90 /* ListNotesViewController.swift */; };
@@ -55,6 +56,8 @@
 		851A7BDF1DB7A1CB006BD827 /* ListNotesViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesViewControllerSpec.swift; sourceTree = "<group>"; };
 		851A7BE21DB7A239006BD827 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		851A7BE31DB7A239006BD827 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		852ACF8D1DCFAC0500AED500 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		852ACFA41DD0362100AED500 /* SecureNote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SecureNote.entitlements; sourceTree = "<group>"; };
 		8562B2641DA6800E0044BF90 /* ListNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesViewController.swift; sourceTree = "<group>"; };
 		8562B2661DA683470044BF90 /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		8562B2681DA6A8EA0044BF90 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 		858166F81D9C879500D50202 /* SecureNote */ = {
 			isa = PBXGroup;
 			children = (
+				852ACFA41DD0362100AED500 /* SecureNote.entitlements */,
 				858166F91D9C879500D50202 /* AppDelegate.swift */,
 				858166FB1D9C879500D50202 /* EditNoteViewController.swift */,
 				858166FD1D9C879500D50202 /* Main.storyboard */,
@@ -132,6 +136,7 @@
 				8562B2641DA6800E0044BF90 /* ListNotesViewController.swift */,
 				8562B2661DA683470044BF90 /* CoreDataService.swift */,
 				8562B2681DA6A8EA0044BF90 /* NoteTableViewCell.xib */,
+				852ACF8D1DCFAC0500AED500 /* KeychainService.swift */,
 			);
 			path = SecureNote;
 			sourceTree = "<group>";
@@ -199,6 +204,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 86U64JGRCC;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					858167091D9C879500D50202 = {
 						CreatedOnToolsVersion = 8.0;
@@ -257,6 +267,7 @@
 				85006C4A1DA5C67F0061D8C1 /* Note.swift in Sources */,
 				8562B2651DA6800E0044BF90 /* ListNotesViewController.swift in Sources */,
 				858166FC1D9C879500D50202 /* EditNoteViewController.swift in Sources */,
+				852ACF8E1DCFAC0500AED500 /* KeychainService.swift in Sources */,
 				85006C441DA5B86A0061D8C1 /* SecureNote.xcdatamodeld in Sources */,
 				858166FA1D9C879500D50202 /* AppDelegate.swift in Sources */,
 			);
@@ -398,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SecureNote/SecureNote.entitlements;
 				DEVELOPMENT_TEAM = 86U64JGRCC;
 				INFOPLIST_FILE = SecureNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -411,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SecureNote/SecureNote.entitlements;
 				DEVELOPMENT_TEAM = 86U64JGRCC;
 				INFOPLIST_FILE = SecureNote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
