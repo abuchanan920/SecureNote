@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jhp-Ti-D5W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zYf-uK-1dc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -70,6 +70,44 @@
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
         </scene>
+        <!--Startup View Controller-->
+        <scene sceneID="kLy-V1-PXT">
+            <objects>
+                <viewController storyboardIdentifier="StartupViewController" id="zYf-uK-1dc" customClass="StartupViewController" customModule="SecureNote" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MLD-5P-ubd"/>
+                        <viewControllerLayoutGuide type="bottom" id="m3b-tp-Wow"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X4U-Q5-HvA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenLines" translatesAutoresizingMaskIntoConstraints="NO" id="Qqa-8I-fZU"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecureNote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPF-mb-R38">
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qqa-8I-fZU" firstAttribute="leading" secondItem="X4U-Q5-HvA" secondAttribute="leading" id="5nR-H1-Npx"/>
+                            <constraint firstItem="VPF-mb-R38" firstAttribute="centerX" secondItem="Qqa-8I-fZU" secondAttribute="centerX" id="LGZ-dD-m7e"/>
+                            <constraint firstItem="Qqa-8I-fZU" firstAttribute="trailing" secondItem="X4U-Q5-HvA" secondAttribute="trailing" id="bjB-Be-rNP"/>
+                            <constraint firstItem="Qqa-8I-fZU" firstAttribute="top" secondItem="MLD-5P-ubd" secondAttribute="bottom" id="kNQ-J6-PZ9"/>
+                            <constraint firstItem="Qqa-8I-fZU" firstAttribute="bottom" secondItem="m3b-tp-Wow" secondAttribute="top" id="uE9-YS-4Ri"/>
+                            <constraint firstItem="VPF-mb-R38" firstAttribute="centerY" secondItem="Qqa-8I-fZU" secondAttribute="centerY" id="x2B-Dj-C42"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5vM-FW-Wup"/>
+                    <connections>
+                        <segue destination="Jhp-Ti-D5W" kind="show" identifier="ListNotesSegue" id="ciU-UD-lUp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DmQ-Ot-1Fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1338.4000000000001" y="135.38230884557723"/>
+        </scene>
         <!--List Notes View Controller-->
         <scene sceneID="aR3-Sh-J9S">
             <objects>
@@ -89,9 +127,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fTf-W5-zmS" firstAttribute="top" secondItem="q8f-tA-dEM" secondAttribute="bottom" constant="5" id="39E-x0-E1R"/>
+                            <constraint firstItem="q8f-tA-dEM" firstAttribute="top" secondItem="ZXY-mF-QEy" secondAttribute="bottom" constant="5" id="TaR-SU-xgK"/>
                             <constraint firstItem="q8f-tA-dEM" firstAttribute="leading" secondItem="UBM-Lz-dDa" secondAttribute="leadingMargin" id="UnR-QF-ivA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q8f-tA-dEM" secondAttribute="trailing" id="dji-qd-4mj"/>
-                            <constraint firstItem="q8f-tA-dEM" firstAttribute="top" secondItem="ZXY-mF-QEy" secondAttribute="bottom" constant="5" id="pwZ-DF-6CB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="q8f-tA-dEM" secondAttribute="leading" id="iHV-Bp-9ut"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Lte-g4-cEn">
@@ -121,15 +160,16 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xYr-om-2Yj" kind="relationship" relationship="rootViewController" id="9iv-7g-wOw"/>
+                        <segue destination="xYr-om-2Yj" kind="relationship" relationship="rootViewController" id="tTo-Ba-Eay"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjJ-xz-m3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-783.20000000000005" y="136.28185907046478"/>
+            <point key="canvasLocation" x="-582" y="136"/>
         </scene>
     </scenes>
     <resources>
+        <image name="GreenLines" width="592" height="396"/>
         <image name="Trash-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>

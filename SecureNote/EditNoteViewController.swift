@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class EditNoteViewController: UIViewController {
+class EditNoteViewController: SecureViewController {
 
     @IBOutlet weak var textContent: UITextView!
     @IBOutlet weak var textTitle: UITextField!

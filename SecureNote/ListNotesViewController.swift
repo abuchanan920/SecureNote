@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ListNotesViewController: UIViewController {
+class ListNotesViewController: SecureViewController {
     let editNoteSegue = "EditNoteSegue"
     let addNoteSegue = "AddNoteSegue"
 
